@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Meeting with Team",
+    "date": "2025-06-24",
+    "time": "10:00",
+    "duration": 60
+  },
+  {
+    "id": 2,
+    "title": "Client Call",
+    "date": "2025-06-24",
+    "time": "10:30",
+    "duration": 30
+  },
+  {
+    "id": 3,
+    "title": "Design Review",
+    "date": "2025-06-26",
+    "time": "11:00",
+    "duration": 45
+  }
+]
