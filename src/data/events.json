@@ -1,23 +1,165 @@
 [
   {
     "id": 1,
-    "title": "Meeting with Team",
+    "title": "Team Meeting",
     "date": "2025-06-24",
-    "time": "10:00",
-    "duration": 60
+    "startTime": "10:00",
+    "endTime": "11:00",
+    "category": "official",
+    "priority": 2
   },
   {
     "id": 2,
     "title": "Client Call",
     "date": "2025-06-24",
-    "time": "10:30",
-    "duration": 30
+    "startTime": "10:30",
+    "endTime": "11:00",
+    "category": "official",
+    "priority": 1
   },
   {
     "id": 3,
-    "title": "Design Review",
+    "title": "Gym",
+    "date": "2025-06-24",
+    "startTime": "10:15",
+    "endTime": "11:00",
+    "category": "personal",
+    "priority": 1
+  },
+  {
+    "id": 4,
+    "title": "Doctor Appointment",
+    "date": "2025-06-25",
+    "startTime": "09:00",
+    "endTime": "09:30",
+    "category": "personal",
+    "priority": 2
+  },
+  {
+    "id": 5,
+    "title": "Daily Standup",
+    "date": "2025-06-25",
+    "startTime": "09:15",
+    "endTime": "09:45",
+    "category": "official",
+    "priority": 1
+  },
+  {
+    "id": 6,
+    "title": "Project Planning",
     "date": "2025-06-26",
-    "time": "11:00",
-    "duration": 45
+    "startTime": "14:00",
+    "endTime": "15:00",
+    "category": "official",
+    "priority": 3
+  },
+  {
+    "id": 7,
+    "title": "Lunch with Friend",
+    "date": "2025-06-26",
+    "startTime": "14:30",
+    "endTime": "15:30",
+    "category": "personal",
+    "priority": 2
+  },
+  {
+    "id": 8,
+    "title": "Code Review",
+    "date": "2025-01-12",
+    "startTime": "11:00",
+    "endTime": "12:00",
+    "category": "official",
+    "priority": 2
+  },
+  {
+    "id": 9,
+    "title": "Dinner with Family",
+    "date": "2025-02-18",
+    "startTime": "19:30",
+    "endTime": "21:00",
+    "category": "personal",
+    "priority": 3
+  },
+  {
+    "id": 10,
+    "title": "Design Presentation",
+    "date": "2025-03-05",
+    "startTime": "10:00",
+    "endTime": "11:30",
+    "category": "official",
+    "priority": 1
+  },
+  {
+    "id": 11,
+    "title": "Grocery Shopping",
+    "date": "2025-04-09",
+    "startTime": "17:00",
+    "endTime": "17:45",
+    "category": "personal",
+    "priority": 2
+  },
+  {
+    "id": 12,
+    "title": "Sprint Planning",
+    "date": "2025-05-03",
+    "startTime": "09:00",
+    "endTime": "10:30",
+    "category": "official",
+    "priority": 1
+  },
+  {
+    "id": 13,
+    "title": "Webinar on AI",
+    "date": "2025-07-22",
+    "startTime": "14:00",
+    "endTime": "15:30",
+    "category": "official",
+    "priority": 2
+  },
+  {
+    "id": 14,
+    "title": "Dinner Date",
+    "date": "2025-08-11",
+    "startTime": "20:00",
+    "endTime": "22:00",
+    "category": "personal",
+    "priority": 3
+  },
+  {
+    "id": 15,
+    "title": "Tech Meetup",
+    "date": "2025-09-07",
+    "startTime": "16:00",
+    "endTime": "18:00",
+    "category": "official",
+    "priority": 2
+  },
+  {
+    "id": 16,
+    "title": "Pet Vet Visit",
+    "date": "2025-10-14",
+    "startTime": "09:00",
+    "endTime": "09:45",
+    "category": "personal",
+    "priority": 2
+  },
+  {
+    "id": 17,
+    "title": "Quarterly Review",
+    "date": "2025-11-19",
+    "startTime": "11:00",
+    "endTime": "12:30",
+    "category": "official",
+    "priority": 1
+  },
+  {
+    "id": 18,
+    "title": "Birthday Celebration",
+    "date": "2025-12-30",
+    "startTime": "18:00",
+    "endTime": "21:00",
+    "category": "personal",
+    "priority": 3
   }
+
 ]

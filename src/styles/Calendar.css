@@ -101,11 +101,65 @@
 .calendar-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
-  gap: 1.5rem;
+  padding: 10px 20px;
+  background-color: #f8f8f8;
+  position: relative;
 }
+/* Apply blue outline around the weekday row */
+.calendar-header-row {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  border: 2px solid #1e88e5;      /* Blue outline */
+  border-radius: 6px;
+  margin-bottom: 8px;
+  background-color: #e3f2fd;      /* Optional: light blue background */
+}
+
+/* Style for each day cell inside the header */
+/* Target all weekday header boxes */
+.calendar-header-day {
+  outline: 2px solid #1e88e5; /* Blue outline */
+  outline-offset: -2px;
+  border-radius: 4px;
+  padding: 10px 0;
+  text-align: center;
+  font-weight: bold;
+  background-color: #e3f2fd; /* Optional: light background */
+  color: #1e88e5;
+}
+
+
+/* Remove right border on last cell */
+.calendar-header-day:last-child {
+  border-right: none;
+}
+.calendar-header-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.add-event-button,
+.notify-button {
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  background-color: #90caf9; /* primary color */
+  color: white;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.add-event-button:hover,
+.notify-button:hover {
+  background-color: #90caf9; /* hover color */
+  color: #1e88e5;
+  box-shadow: 0 0 8px rgba(33, 150, 243, 0.2); /* soft shadow */
+}
+
+
 
 .month-title {
   font-size: 2.2rem;
@@ -160,6 +214,37 @@
   opacity: 0.3;
   color: #9ca3af;
 }
+.calendar-day.has-event {
+  border: 2px solid #1e90ff;
+  border-radius: 6px;
+}
+
+.calendar-day.has-conflict {
+  background-color: #ffeaea;
+  border-color: red;
+}
+
+.event-hover-popup {
+  position: absolute;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 6px;
+  font-size: 0.85rem;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  margin-top: 4px;
+}
+
+.event-hover-item {
+  margin: 2px 0;
+}
+
+.resched-label {
+  color: orange;
+  font-size: 0.75rem;
+  margin-left: 4px;
+}
+
 /* Month Picker */
 .month-text,
 .year-text {
@@ -282,6 +367,53 @@
   outline: none;
   box-shadow: 0 0 0 3px rgba(100, 149, 237, 0.3);
 }
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #f8f8f8;
+  position: relative;
+}
+
+.dropdown-wrapper {
+  position: relative;
+}
+
+.calendar-select {
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  transition: background 0.2s ease;
+}
+
+.calendar-select:hover {
+  background-color: #f0f0f0;
+}
+
+.month-dropdown,
+.year-dropdown {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  z-index: 100;
+  max-height: 200px;
+  overflow-y: auto;
+  width: 160px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #eaeaea;
+}
 
 @media (max-width: 600px) {
   .calendar-nav-buttons button {
@@ -347,3 +479,56 @@
     border-radius: 8px;
   }
 }
+.task-item.rescheduled {
+  background-color: #fff6e0;
+  border-left: 5px solid orange;
+}
+
+.task-item .note {
+  color: #d17a00;
+  font-style: italic;
+  margin-left: 4px;
+}
+/* Highlight days with events */
+.day.has-event {
+  border: 2px solid #1e90ff;
+  border-radius: 6px;
+}
+
+/* Highlight conflict days specially */
+.day.has-conflict {
+  border-color: red;
+  background-color: #ffeaea;
+}
+
+/* Conflict label in sidebar */
+.task-item.conflict {
+  border-left: 5px solid red;
+  background-color: #fff0f0;
+}
+
+.resched-label {
+  color: orange;
+  font-size: 0.8rem;
+  margin-left: 4px;
+}
+.add-event-button {
+  background-color: #90caf9; /* Light blue */
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(33, 150, 243, 0.2); /* Soft shadow */
+}
+
+.add-event-button:hover {
+  background-color: #1e88e5; /* Rich blue on hover */
+  box-shadow: 0 6px 12px rgba(33, 150, 243, 0.3); /* Stronger shadow */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+

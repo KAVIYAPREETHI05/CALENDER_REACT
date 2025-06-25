@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import moment from 'moment';
 import Sidebar from '../components/Sidebar';
 import CalendarGrid from '../components/CalendarGrid';
+import CalendarHeader from '../components/CalendarHeader'
 import '../styles/Calendar.css';
 
 const generateCalendar = (date) => {
@@ -84,6 +85,7 @@ const CalendarLayout = () => {
 
   const monthNames = moment.months();
   const yearsRange = Array.from({ length: 20 }, (_, i) => moment().year() - 10 + i);
+console.log("Rendering CalendarLayout", currentDate.format("MMMM YYYY"));
 
   return (
     <div className="calendar-layout">
@@ -92,16 +94,17 @@ const CalendarLayout = () => {
       </div>
 
       <div className="calendar-container">
-        <div className="calendar-header">
-          <h1 className="month-title">
-            <span className="month-text" onClick={handleMonthClick}>
-              {currentDate.format("MMMM")}
-            </span>
-            <span className="year-text" onClick={handleYearClick}>
-              {currentDate.format("YYYY")}
-            </span>
-          </h1>
-        </div>
+  <CalendarHeader
+  key={currentDate.format("MM-YYYY")} // force re-render on month/year change
+  currentDate={currentDate}
+  onMonthSelect={(monthIndex) =>
+    setCurrentDate((prev) => moment(prev).month(monthIndex))
+  }
+  onYearSelect={(year) =>
+    setCurrentDate((prev) => moment(prev).year(year))
+  }
+/>
+
 
         {/* Month Picker */}
         {showMonthPicker && (
